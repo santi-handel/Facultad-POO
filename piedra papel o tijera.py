@@ -6,7 +6,7 @@ from tkinter import messagebox as ms
 #funciones
     
 def juego():
-    cpu=random.randrange(0,2)
+    cpu=random.randrange(0,3)
     if varUser.get()==0:
         if cpu==0:
             ms.showinfo("Resultado","Has elegido piedra y tu rival tambien, EMPATAN")
