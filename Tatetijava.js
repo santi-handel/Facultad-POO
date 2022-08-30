@@ -22,6 +22,7 @@ class Square {
             }
         }
 }
+
  class TicTacToe { constructor(id) {
     // Get canvas and context.
     this.canvas = document.getElementById(id);
@@ -157,3 +158,4 @@ class Square {
             this.gameOver = false;
           }
     }
+new TicTacToe('canvas');
