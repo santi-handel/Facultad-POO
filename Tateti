@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tic-Tac-Toe</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="160" height="160"></canvas>
+    <script>
+      // Insert JavaScript here ...
+    </script>
+  </body>
+</html>
