@@ -10,14 +10,14 @@ class Square {
 	// El metodo dibujar se utiliza para dibuajr el cuadrado.
 	draw() {
 		// Dibuja el cuadrado.
-		this.ctx.strokeStyle = 'black';
+		this.ctx.strokeStyle = 'red';
 		this.ctx.strokeRect(this.x, this.y, this.width, this.height);
 		// Draw the actor if it is not null.
 		if (this.actor) {
 			this.ctx.fillStyle = 'black';
 			this.ctx.font = '30px Arial';
 			this.ctx.textAlign = "center";
-			this.ctx.fillText(this.actor, this.x + this.width / 2, this.y + this.height / 2 + 10);
+			this.ctx.fillText(this.actor, this.x + this.width / 2, this.y + this.height / 2 +10);
 		}
 	}
 }
@@ -36,12 +36,11 @@ class TicTacToe {
 			for (let y = 0; y < 3; y++)
 				this.squares.push(new Square(x * w, y * h, w, h, this.ctx));
 		
-		// Create the jugadores.
+		// crea los jugadores.
 		this.actors = ["X", "O"];
 		// Define the current actor.
 		this.turn = 0;
 		// Defines a check to see if the game is over.
-		
 		this.gameOver = false;
 		// Dibuja cada cuadrado (por cada array).
 		this.squares.forEach(squares => squares.draw());
@@ -68,7 +67,7 @@ class TicTacToe {
 			if (square.actor != null) continue;
 			// Check if the mouse is inside the square.
 			if (x >= square.x && x <= square.x + square.width && y >= square.y && y <= square.y + square.height) {
-				// Set actor
+				// le da un actor al objeto cuadrado y vuelve a dibujar.
 				square.actor = this.actors[this.turn];
 				square.draw();
 				// cambiar el turno
@@ -121,7 +120,7 @@ class TicTacToe {
 				}
 			}
 		}
-		// si NO hay combinacion ganadaro (si no hay ganador) y todos la cantidad de cuadrados vacios es CERO
+		// si NO hay combinacion ganadora (si no hay ganador) y todos la cantidad de cuadrados vacios es CERO
 		if (!this.gameOver && this.squares.filter(square => square.actor == null).length == 0) {
 			this.gameOver = true;
 			this.ctx.fillStyle = 'red';
