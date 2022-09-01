@@ -7,7 +7,7 @@ class Square {
 		this.ctx = ctx;
 		this.actor = null;
 	}
-	// El metodo dibujar se utiliza para dibuajr el cuadrado.
+	// El metodo dibujar se utiliza para dibujar el cuadrado. 
 	draw() {
 		// Dibuja el cuadrado.
 		this.ctx.strokeStyle = 'red';
