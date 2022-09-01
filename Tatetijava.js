@@ -15,7 +15,7 @@ class Square {
 		// Dibuja el actor en el caso que no sea nulo.
 		if (this.actor) {
 			this.ctx.fillStyle = 'red';
-			this.ctx.font = '30px Arial';
+			this.ctx.font = '40px Arial';
 			this.ctx.textAlign = "center";
 			this.ctx.fillText(this.actor, this.x + this.width / 2, this.y + this.height / 2 +10);
 		}
@@ -128,18 +128,19 @@ class TicTacToe {
 			this.ctx.fillText("EMPATE!", this.canvas.width / 2, this.canvas.height / 2);
 		}
 	}
-	// The reset method restarts the game.
+	// Resetea el juego.
 	reset() {
-		// Clear canvas
+		// Limpiar canvas
 		this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-		// Reset all actors.
+		// Resetea los actores.
 		this.squares.forEach(squares => squares.actor = null);
-		// Draw the board.
+		// Dibuja la tabla.
 		this.squares.forEach(squares => squares.draw());
-		// Reset turn.
+		// Resetea el turno.
 		this.turn = 0;
-		// Reset game over.
+		// Resetea el game over.
 		this.gameOver = false;
 	}
 }
 new TicTacToe('canvas');
+
